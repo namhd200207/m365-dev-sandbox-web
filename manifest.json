@@ -1,0 +1,28 @@
+{
+    "name": "M365 Dev Sandbox Web App",
+    "short_name": "M365Dev",
+    "description": "A sample web application for Microsoft 365 Developer Program",
+    "version": "1.0",
+    "permissions": [
+        "identity",
+        "messageTeamMembers",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0000ff",
+    "icons": [
+        {
+            "src": "/images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

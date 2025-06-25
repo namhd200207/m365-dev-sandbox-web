@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/office/appforoffice/1.1 OfficeAppManifest.xsd" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
+  <Id>com.example.m365devsandbox</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Your Name</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="M365 Dev Sandbox"/>
+  <Description DefaultValue="A sample Outlook add-in for Microsoft 365 Developer Program"/>
+  <IconUrl DefaultValue="https://example.com/icon.png"/>
+  <HighResolutionIconUrl DefaultValue="https://example.com/icon.png"/>
+  <SupportUrl DefaultValue="https://example.com/support"/>
+  <AppDomains>
+    <AppDomain>https://example.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
+  <FormFactor>
+    <Desktop/>
+    <Tablet/>
+    <Phone/>
+  </FormFactor>
+  <Permissions>ReadWriteMailbox</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read"/>
+  </Rule>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
+    <VersionOverride Version="1.0">
+      <Description resid="residDescription"/>
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.3">
+          <bt:Set Name="Mailbox"/>
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host Name="Mailbox"/>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="icon" DefaultValue="https://example.com/icon.png"/>
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="messageRead" DefaultValue="https://example.com/messageRead.html"/>
+          <bt:Url id="appointmentRead" DefaultValue="https://example.com/appointmentRead.html"/>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="residDisplayName" DefaultValue="M365 Dev Sandbox"/>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="residDescription" DefaultValue="A sample Outlook add-in for Microsoft 365 Developer Program"/>
+        </bt:LongStrings>
+      </Resources>
+      <Actions>
+        <bt:ShowTaskpane>
+          <bt:SourceLocation resid="messageRead"/>
+          <bt:Title resid="residDisplayName"/>
+        </bt:ShowTaskpane>
+      </Actions>
+    </VersionOverride>
+  </VersionOverrides>
+</OfficeApp>

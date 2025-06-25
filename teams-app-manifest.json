@@ -1,0 +1,37 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "1.0.0",
+    "id": "com.example.m365devsandbox",
+    "packageName": "com.example.m365devsandbox",
+    "developer": {
+        "name": "Your Name",
+        "websiteUrl": "https://example.com",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/terms"
+    },
+    "name": {
+        "short": "M365 Dev Sandbox",
+        "full": "Microsoft 365 Developer Sandbox"
+    },
+    "description": {
+        "short": "A sample Teams app for Microsoft 365 Developer Program",
+        "full": "This is a sample Teams app created for the Microsoft 365 Developer Program."
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [],
+    "staticTabs": [],
+    "configurableTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "example.com"
+    ]
+}
